@@ -1,0 +1,234 @@
+
+
+@font-face {
+    font-family:gameFont ;
+    src: url(fonts/IndieFlower-Regular.ttf);
+}
+
+
+@font-face {
+    font-family:kalam-regular;
+    src: url(fonts/Kalam-Regular.ttf);
+}
+
+
+
+
+/* used to remove elements from the layout*/
+.hidden
+{
+    display:none !important;
+}
+
+
+.transparent
+{
+    opacity:0.5;
+}
+
+
+/*styles all buttons in the layout*/
+button
+{
+    font-family: kalam-regular;
+    border:2px solid rgb(99, 99, 255);
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+/*the whole game layout.
+  wrapper class of all game components excluding the mute icon*/
+#gameLayout
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   width:100vw;
+   height:100vh;
+   max-width: 100%;
+   
+}
+
+/* the categories screen, the initial game screen*/
+#categoriesScreen
+{
+    display:flex;
+    flex-wrap:wrap;
+    /*border:2px solid black;*/
+
+}
+
+
+
+
+/*style each individual category image*/
+.categoryImg
+{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin:0.5rem;
+}
+.categoryImg:hover
+{
+    
+    cursor: pointer;
+
+}
+
+.glowingBorder
+{
+    box-shadow:2px 2px 10px gold ;
+}
+
+
+#startBtn
+{
+    flex-basis:30%;
+    margin:auto;
+}
+
+
+/*each category card contains both the image and the text*/
+.categoryCard
+{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+/*the wrapper class of the letter buttons (keyboard)*/
+#letterBtns
+{
+    width:300px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+
+
+.letterBtn
+{
+    background-color: rgb(99, 99, 255);
+    color:white;
+    border:white;
+    cursor:pointer;
+    margin:5px;
+
+    font-size:1rem;
+    font-family: kalam-regular;
+}
+
+
+/*used to show that the hint buttons were used and are now inactive*/
+.notActive
+{
+    color:grey;
+    cursor:arrow;
+}
+
+
+i{
+    cursor:pointer;
+
+}
+
+/*used to show that the letter appears in the word*/
+.correctClickedLetter
+{
+    background-color:greenyellow;
+    cursor:auto !important;
+}
+
+/*used to show that the letter doesn't appear in the word*/
+.wrongClickedLetter
+{
+    background-color: grey;
+    cursor:auto !important;
+}
+
+
+#hintBtns
+{
+    display:flex;
+    
+}
+
+.usedHint
+{
+    color:grey !important;
+}
+
+#word
+{
+    display:flex;
+
+
+}
+
+.letterDiv
+{
+    border-bottom:1px solid black;
+    margin:10px;
+    width:20px;
+    font-family: kalam-regular;
+}
+
+
+
+
+#categoryTxt
+{
+    font-family:kalam-regular;
+}
+
+
+
+
+#endGameScreen
+{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color:rgb(230, 247, 255) ;
+    text-align: center;
+
+
+}
+
+
+@media only screen and (orientation:portrait)
+{
+    #categoriesScreen
+    {
+        display:flex;
+        flex-direction: column;
+        overflow-y:scroll;
+    }
+
+    #startBtn
+    {
+        align-self:stretch;
+    }
+
+    #gameScreen
+    {
+        width:100%;
+        display:grid;
+        justify-items: center;
+    }
+}
+
+
+
+
+
+

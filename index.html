@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ae4cb29425.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <i id="muteIcon" class="fa-solid fa-volume-xmark hidden"></i>
+        <i id="soundIcon" class="fa-solid fa-volume-high"></i>
+    </header>
+
+<div id="gameLayout">
+    
+    <div id="categoriesScreen">
+        
+    </div>
+
+    <div id="gameScreen">
+
+
+        <div id="hintBtns">
+        <i  id="hintIcon" class="fa-regular fa-lightbulb" style="color: #FFD43B;font-size:24px;"></i>
+       
+        <i id="letterHint" class="fa-solid fa-a" style="color: #B197FC; font-size:24px;"></i>
+        </div>
+        
+        <h2 id="categoryTxt"></h2>
+    
+
+        <div id="word">
+
+        </div>
+
+        <p id="hintText"></p>
+
+        <canvas id="canvas" width="200px" height="300px"></canvas>
+
+        <div id="letterBtns">
+            <button class="letterBtn" value="a">A</button>
+            <button class="letterBtn" value="b">B</button>
+            <button class="letterBtn" value="c">C</button>
+            <button class="letterBtn" value="d">D</button>
+            <button class="letterBtn" value="e">E</button>
+            <button class="letterBtn" value="f">F</button>
+            <button class="letterBtn" value="g">G</button>
+            <button class="letterBtn" value="h">H</button>
+            <button class="letterBtn" value="i">I</button>
+            <button class="letterBtn" value="j" >J</button>
+            <button class="letterBtn" value="k">K</button>
+            <button class="letterBtn" value="l">L</button>
+            <button class="letterBtn" value="m">M</button>
+            <button class="letterBtn" value="n">N</button>
+            <button class="letterBtn" value="o">O</button>
+            <button class="letterBtn" value="p">P</button>
+            <button class="letterBtn" value="q">Q</button>
+            <button class="letterBtn" value="r">R</button>
+            <button class="letterBtn" value="s">S</button>
+            <button class="letterBtn" value="t">T</button>
+            <button class="letterBtn" value="u">U</button>
+            <button class="letterBtn" value="v">V</button>
+            <button class="letterBtn"  value="w">W</button>
+            <button class="letterBtn" value="x">X</button>
+            <button class="letterBtn" value="y">Y</button>
+            <button class="letterBtn" value="z">Z</button>
+            
+
+
+        </div>
+
+    </div>
+    
+    <div id="endGameScreen" class="hidden">
+        <h1 id="endGameText"></h1>
+        <h3 id="wordReveal"></h3>
+        <button id="playAgainBtn">Play Again</button>
+        <button id="menuBtn">Menu</button>
+
+
+    </div>
+
+</div>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>
