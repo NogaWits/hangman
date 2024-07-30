@@ -111,6 +111,10 @@ function imageClick(e)
 // fires when the player clicked the start button
  async function startGame()
 {
+    letterBtns.forEach(btn=>{
+        btn.addEventListener("click",checkExistness);
+    })
+
     pauseAndResetAllSounds();
     buttonClick.play();
     endGameScreen.classList.add("hidden");
@@ -152,11 +156,6 @@ function createWord(numOfLetters)
 }
 
 
-/* for each letter button in the keyboard that is being clicked 
-we want to check if the letter exists in the word
-letterBtns.forEach(btn=>{
-    btn.addEventListener("click",checkExistness);
-})*/
 
 
 
@@ -170,6 +169,8 @@ function checkExistness(e)
     /* each letter btn has it's corresponding letter value
     e.g: the a btn's value is a too*/
     let val=btn.value;
+
+    btn.removeEventListener('click',checkExistness);
 
 
     /* if the letter exists in the word do...*/
